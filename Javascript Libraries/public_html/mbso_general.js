@@ -29,13 +29,60 @@ function getParameterByName(name) {
 /***********************************************************************/
 
 /***********************************************************************/
+// Description: function to return absolute URL and append to it the param
+// Author: Open source
+// Last updated: 15/05/2017 16.33
+// Use: if current URL is http://www.fexco.com/test1/test2
+//  getAbsoluteUrl(/test3); returns http://www.fexco.com/test3
+/***********************************************************************/
+var getAbsoluteUrl = (function() {
+    var a;
+    return function(url) {
+        if(!a) a = document.createElement('a');
+        a.href = url;
+
+        return a.href;
+    };
+})();
+/***********************************************************************/
+
+/***********************************************************************/
 // Description: function to return a random number to a max of 'intUpTo'
 // Author: Open source
 // Last updated: 15/05/2017 16.33
 // Use: 
 //  var strDate=GenerateRandomNumber(intUpTo);
 /***********************************************************************/
-function GenerateRandomNumber ( intUpTo ){
+function generateRandomNumber ( intUpTo ){
     return Math.floor ( Math.random() * intUpTo );
 }
+/***********************************************************************/
+
+/***********************************************************************/
+// Removes an item from a given array
+/***********************************************************************/
+function removeArrayItem(arr, item) {
+    var i = 0;
+    while (i < arr.length) {
+        if (arr[i] == item) {
+            arr.splice(i, 1);
+        } else {
+            i++;
+        }
+    }
+};
+/***********************************************************************/
+
+/***********************************************************************/
+// Does a given array contain a item
+/***********************************************************************/
+function arrayContains(a, obj) {
+    var i = a.length;
+    while (i--) {
+        if (a[i] === obj) {
+            return true;
+        }
+    }
+    return false;
+};
 /***********************************************************************/
