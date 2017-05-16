@@ -1,8 +1,9 @@
 /***********************************************************************/
- //This JS files allows validation of inputs and selections
- // Author: MBSO
- // Last updated: 15/05/2017 16:33
- // Last update details: added 1 new function
+//This JS files allows validation of inputs and selections
+// Author: MBSO
+// Version 1.0
+// Last updated: 15/05/2017 16:33
+// Last update details: added 1 new function
 /***********************************************************************/
 
 /***********************************************************************/
