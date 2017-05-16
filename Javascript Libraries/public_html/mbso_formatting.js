@@ -1,7 +1,7 @@
 /***********************************************************************/
 //This JS files allows formatting of inputs and selections
 // Author: MBSO
-//  Version 1.0
+// Version 1.0
 // Last updated: 15/05/2017 16:33
 // Last update details: added 1 new function
 /***********************************************************************/
