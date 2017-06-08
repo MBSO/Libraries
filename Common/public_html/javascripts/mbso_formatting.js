@@ -107,3 +107,15 @@ function onlyLettersNums(str) {
     return str.toLowerCase().replace(/[^a-z,0-9,-]/g, "");
 };
 /***********************************************************************/
+// returns the array of KeyStat string items
+/***********************************************************************/
+function splitSepString(sepString) {
+    for(var i=0;i<sepString.length;i++)
+    {
+        var aryResult = sepString.split("[##SEP##]");
+        var strLastElement = aryResult[aryResult.length -1];
+        strLastElement = strLastElement.substring (0, strLastElement.length - 8 );
+        aryResult[aryResult.length -1] = strLastElement;
+        return aryResult;
+    }
+}
