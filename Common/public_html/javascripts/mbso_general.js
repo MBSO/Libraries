@@ -19,11 +19,11 @@
 /***********************************************************************/
 function getParameterByName(name) {
     name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regexS = "[\\?&]" + name + "=([^&#]*)";
     var regex = new RegExp( regexS );
     var results = regex.exec( window.location.href );
-    if( results == null )
-      return "";
+    if ( results == null )
+       return "";
     else
       return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
@@ -61,6 +61,8 @@ function generateRandomNumber ( intUpTo ){
 
 /***********************************************************************/
 // Removes an item from a given array
+// arr = array
+// item = variable to remove
 /***********************************************************************/
 function removeArrayItem(arr, item) {
     var i = 0;
@@ -72,18 +74,39 @@ function removeArrayItem(arr, item) {
         }
     }
 };
+
 /***********************************************************************/
+// Return the unique values in an array
+/***********************************************************************/
+function getArrayUniques(array) {
+    var unique_array = [];
+    for (var i=0, l=array.length; i<l; i++)
+        if (unique_array.indexOf(array[i]) === -1 && array[i] !== '')
+            unique_array.push(array[i]);
+    return unique_array;
+}
 
 /***********************************************************************/
 // Does a given array contain a item
 /***********************************************************************/
-function arrayContains(a, obj) {
-    var i = a.length;
-    while (i--) {
-        if (a[i] === obj) {
+function arrayContains(array, obj) {
+    var arrayLength = array.length;
+    while (arrayLength--) {
+        if (array[arrayLength] === obj) {
             return true;
         }
     }
     return false;
 };
+
 /***********************************************************************/
+//HTML Element functions
+//Toggle an element to show or hide
+/***********************************************************************/
+
+function handleOpenClose(htmlElement) {
+            var get_element = document.getElementById(htmlElement);
+            get_element.style.display 
+                    = (get_element.style.display === "none" ? "inline" : "none");
+}
+
