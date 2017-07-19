@@ -3,7 +3,7 @@
 *********************************************************************************
     Created:    19-May-2017, 10:27:42
     Author:     Michael Cunningham
-    Updated:    19-May-2017, 10:27:42  
+    Updated:    14-July-2017, 10:27:42  
 ********************************************************************************/
 
 /* START SELECTOR PAGE */
@@ -44,6 +44,13 @@ h1{
     clear:both;
     border-top:2px #E95D0E solid;
     border-bottom:2px #0B6D52 solid;
+}
+h2{
+    color:#004063;
+    padding:10px 0px;
+    clear:both;
+    border-top:2px #E95D0E solid;
+    border-bottom:2px #2E4660 solid;
 }
 .enablefield{
     background-color: #0B6D52;
@@ -119,3 +126,89 @@ hr {
 } 
 /*END LANDING PAGE*/
 /*********************************************************************************/
+ul.crumbs{   
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+    margin-bottom:20px;
+    font-weight:bold
+}
+ul.crumbs li {
+    display: inline;
+    color: red;
+}
+ul.crumbs li+li:before {
+    content:"/\00a0";
+    padding: 8px;
+    color: black;
+}
+ul.crumbs li a {
+    color: #004063;
+    text-decoration: none;
+}
+ul.crumbs li a:hover {
+    color: #E95D0E;
+    text-decoration: underline;
+}
+
+.position {
+    margin:0px 0px 10px 0px
+}
+/*********************************************************************************/
+/*Progress Bars*/
+/*********************************************************************************/
+.progress-bar {
+  position: relative;
+  height: 100px;
+  width: 100px;
+
+}
+
+.progress-bar div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.progress-bar div span { /* rotating bit*/
+  position: absolute;
+  font-family: Arial;
+  font-size: 25px;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  left: 12.5px;
+  top: 12.5px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progress-bar .background { background-color: #b3cef6; }
+
+.progress-bar .rotate {
+  clip: rect(0 50px 100px 0);
+  background-color: #4b86db;
+}
+
+.progress-bar .left {
+  clip: rect(0 50px 100px 0);
+  opacity: 1;
+  background-color: #b3cef6;
+}
+
+.progress-bar .right {
+  clip: rect(0 50px 100px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+  background-color: #4b86db;
+}
+ @keyframes 
+toggle {  0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}
+}
